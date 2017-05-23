@@ -1,10 +1,9 @@
-#Joyce Feng
 #Joey Jiemjitpolchai
 import math
-def calcCos(x, c, n):
+def calcCos(x, term):
     output = 0
-    for k in range(0, n+1):
-        output += (((-1)**k) * ((x-c)**(2*k)))/math.factorial(2*k)
+    for k in range(0, term+1):
+        output += (((-1)**k) * (x**(2*k)))/math.factorial(2*k)
     return output
 
 def calcSin(x, c, n):
@@ -58,13 +57,6 @@ def calcArcCos(x, c, n):
     for i in range (0, math.ceil(n/2)):
          sum -= ((math.factorial(2*i))*(x**(2*i+1)))/((2**(2*i))*((math.factorial(i))**2)*(2*i+1))
     return sum
-
-print(calcSin(math.pi, 0, 5))
-print(calcLn(3, 2, 3))
-print(calcE(5, 0, 3))
-print("Scientific Calcuator")
-x = input('Enter your function:')
-print("Test", calcCos(int(x), 2))
 #print(calcSin(math.pi, 0, 5)
 #print(calcLn(3, 2, 3))
 #print(calcE(5, 0, 3))
@@ -72,4 +64,3 @@ print("Test", calcCos(int(x), 2))
 #x = input('Enter your function:')
 #print("Test", calcCos(int(x), 2))
 print(calcLn(-1, 0, 100))
-
