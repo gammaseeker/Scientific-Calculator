@@ -24,7 +24,10 @@ def sinClick():
 
 def cosClick():
     print(calcCos(float(e1.get()), float(e2.get()), int(e3.get())))
-    
+
+"""def oneOverXPlusOneClick():
+    print(calcOneOverXPlusOne(float(e1.get()), float(e2.get()), int(e3.get())))"""
+
 def eClick():
     print(calcE(float(e1.get()), float(e2.get()), int(e3.get())))
 def arcTanClick():
@@ -51,6 +54,24 @@ def calcSin(x, c, n): #Tested
     for i in range (0, math.ceil(n/2)):
         sum += ((-1)**i)*((x-c)**(2*i+1))/math.factorial(2*i+1)
     return sum
+
+""""def calcLn(x, c, n):#To be fixed
+    if(x < 0):
+        return("Enter an x between the range of 1 to infinity.")
+    if (c < 1):
+        return ("Enter a c between the range of 1 to infinity.")
+    sum = 0
+    for i in range (1, n+1):
+            sum += (((-1)**(i-1))*((x-c)**i)/(i))
+    return sum"""
+
+"""def calcOneOverXPlusOne(x, c, n):
+    if(x == -1):
+        return "Enter another number."
+    sum = 1
+    for i in range(1, n + 1):
+        sum += ((-1)**n) * (x-c)**n
+    return sum"""
 
 def calcE(x, c, n):#Tested
     sum = 0
@@ -89,6 +110,7 @@ def calcArcCos(x, c, n):#Tested
 sinButton = Button(root, command = sinClick, text="Sin(x)", fg="black").grid(row=3, column=2, sticky=W, pady=4)
 cosButton = Button(root, command = cosClick, text="Cos(x)", fg="black").grid(row=3, column=3, sticky=W, pady=4)
 eButton = Button(root, command = eClick, text="e^(x)", fg="black").grid(row=3, column=4, sticky=W, pady=4)
+#lnButton = Button(root, command = oneOverXPlusOneClick, text="1/(1+x)", fg="black").grid(row=3, column=5, sticky=W, pady=4)
 arcTanButton = Button(root, command = arcTanClick, text="arctan(x)", fg="black").grid(row=3, column=5, sticky=W, pady=4)
 arcSinButton = Button(root, command = arcSinClick, text="arcsin(x)", fg="black").grid(row=3, column=6, sticky=W, pady=4)
 arcCosButton = Button(root, command = arcCosClick, text="arccos(x)", fg="black").grid(row=3, column=7, sticky=W, pady=4)
