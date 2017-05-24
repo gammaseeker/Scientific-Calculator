@@ -2,7 +2,6 @@
 #Joey Jiemjitpolchai
 import math
 import tkinter
-import random
 from tkinter import *
 
 root = tkinter.Tk()
@@ -36,7 +35,7 @@ def arcSinClick():
 def arcCosClick():
     print(calcArcCos(float(e1.get()), float(e2.get()), int(e3.get())))
                 
-def calcCos(x, c, n): #Tested
+def calcCos(x, c, n): 
     if (n%2 == 1):
         return "Enter an even degree."
     sum = 0
@@ -44,7 +43,7 @@ def calcCos(x, c, n): #Tested
         sum += ((-1)**k) * ((x-c)**(2*k))/math.factorial(2*k)
     return sum
 
-def calcSin(x, c, n): #Tested
+def calcSin(x, c, n): 
     if (n%2 == 0):
         return "Enter an odd degree."
     sum = 0
@@ -52,13 +51,13 @@ def calcSin(x, c, n): #Tested
         sum += ((-1)**i)*((x-c)**(2*i+1))/math.factorial(2*i+1)
     return sum
 
-def calcE(x, c, n):#Tested
+def calcE(x, c, n):
     sum = 0
     for i in range (0, n+1):
         sum += ((x-c)**i)/math.factorial(i)
     return sum
 
-def calcArcTan(x, c, n):#Tested
+def calcArcTan(x, c, n):
     if (n%2 == 0):
         return("Enter an odd degree.")
     sum = 0
@@ -66,7 +65,7 @@ def calcArcTan(x, c, n):#Tested
         sum += ((-1)**i)*((x-c)**(2*i+1))/(2*i+1)
     return sum
 
-def calcArcSin(x, c, n):#Tested
+def calcArcSin(x, c, n):
     if (n%2 == 0):
         return("Enter an odd degree.")
     if (x < -1 or x > 1):
@@ -76,7 +75,7 @@ def calcArcSin(x, c, n):#Tested
         sum += math.factorial(2*i)*(x**(2*i+1))/((((2**i)*math.factorial(i))**2)*(2*i+1))
     return sum
 
-def calcArcCos(x, c, n):#Tested
+def calcArcCos(x, c, n):
     if (n%2 == 0):
         return("Enter an odd degree.")
     if (x < -1 or x > 1):
